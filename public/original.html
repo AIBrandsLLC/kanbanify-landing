@@ -45,12 +45,18 @@
     <div class="flex min-h-screen w-full flex-col">
       <!-- Header -->
       <header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur dark:bg-slate-900/80 dark:border-slate-800">
-          <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <a href="#" class="flex items-center gap-2">
-            <img src="assets/logo.svg" alt="Kanban Taiga logo" class="h-8 w-8 rounded-md bg-transparent" />
+            <img src="assets/Logo.png" alt="Kanban Taiga logo" class="h-8 w-8 rounded-md bg-transparent" />
             <span class="text-lg font-bold tracking-tight">Kanban Taiga</span>
           </a>
-          <button id="mobile-nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800">
+          <button
+            id="mobile-nav-toggle"
+            type="button"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+            class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+          >
             <span class="material-symbols-outlined">menu</span>
             <span class="sr-only">Open navigation</span>
           </button>
@@ -73,29 +79,39 @@
             <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary" href="#">Pricing</a>
           </nav>
           <div class="flex items-center gap-4">
-            <button id="login-button" type="button" aria-haspopup="dialog" aria-controls="login-modal" class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700">Login</button>
+            <button
+              id="login-button"
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="login-modal"
+              class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+            >
+              Login
+            </button>
             <button type="button" class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition hover:bg-primary/90">Start Free Trial</button>
           </div>
         </div>
       </header>
-        <!-- Login Modal (low-fi) -->
-        <div id="login-modal" class="fixed inset-0 z-50 hidden items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
-          <div class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
-          <div class="relative w-full max-w-md rounded-lg bg-white dark:bg-slate-900 p-6 shadow-lg">
-            <h3 id="login-modal-title" class="text-lg font-semibold text-slate-900 dark:text-white">Login</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Low‑fi placeholder form</p>
-            <form>
-              <label class="text-xs text-slate-600 dark:text-slate-300">Email</label>
-              <input type="email" class="mt-1 mb-3 block w-full rounded-md border px-3 py-2 text-sm" />
-              <label class="text-xs text-slate-600 dark:text-slate-300">Password</label>
-              <input type="password" class="mt-1 mb-4 block w-full rounded-md border px-3 py-2 text-sm" />
-              <div class="flex justify-end gap-2">
-                <button type="button" id="login-cancel" class="rounded-lg px-4 py-2 text-sm bg-slate-100 dark:bg-slate-800">Cancel</button>
-                <button type="button" class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white">Sign in</button>
-              </div>
-            </form>
-          </div>
+      <!-- Login Modal (low-fi) -->
+      <div id="login-modal" class="fixed inset-0 z-50 hidden items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+        <div class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+        <div class="relative w-full max-w-md rounded-lg bg-white dark:bg-slate-900 p-6 shadow-lg">
+          <h3 id="login-modal-title" class="text-lg font-semibold text-slate-900 dark:text-white">Login</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Low‑fi placeholder form</p>
+          <form>
+            <label class="text-xs text-slate-600 dark:text-slate-300">Email</label>
+            <input type="email" class="mt-1 mb-3 block w-full rounded-md border px-3 py-2 text-sm" />
+            <label class="text-xs text-slate-600 dark:text-slate-300">Password</label>
+            <input type="password" class="mt-1 mb-4 block w-full rounded-md border px-3 py-2 text-sm" />
+            <div class="flex justify-end gap-2">
+              <button type="button" id="login-cancel" class="rounded-lg px-4 py-2 text-sm bg-slate-100 dark:bg-slate-800">Cancel</button>
+              <button type="button" class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white">Sign in</button>
+            </div>
+          </form>
         </div>
+      </div>
       <!-- Main Content -->
-      <main class="flex-1">
-... (file continues)
+      <main class="flex-1">... (file continues)</main>
+    </div>
+  </body>
+</html>

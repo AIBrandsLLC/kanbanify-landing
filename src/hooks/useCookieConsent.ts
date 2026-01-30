@@ -1,25 +1,32 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-export type Consent = 'all' | 'essential' | null
+export type Consent = 'all' | 'essential' | null;
 
-const KEY = 'kanbanify_cookie_consent'
+const KEY = 'kanbanify_cookie_consent';
 
-export default function useCookieConsent(){
-  const [consent, setConsent] = useState<Consent>(null)
+export default function useCookieConsent() {
+  const [consent, setConsent] = useState<Consent>(null);
 
-  useEffect(()=>{
-    try{
-      const v = localStorage.getItem(KEY)
-      if(v === 'all' || v === 'essential') setConsent(v as Consent)
-    }catch(e){}
-  },[])
+  // Selalu tampilkan consent banner setiap refresh
+  useEffect(() => {
+    try {
+      localStorage.removeItem(KEY);
+      setConsent(null);
+    } catch (e) {}
+  }, []);
 
-  function accept(){
-    try{ localStorage.setItem(KEY,'all'); setConsent('all') }catch(e){}
+  function accept() {
+    try {
+      localStorage.setItem(KEY, 'all');
+      setConsent('all');
+    } catch (e) {}
   }
-  function deny(){
-    try{ localStorage.setItem(KEY,'essential'); setConsent('essential') }catch(e){}
+  function deny() {
+    try {
+      localStorage.setItem(KEY, 'essential');
+      setConsent('essential');
+    } catch (e) {}
   }
 
-  return { consent, accept, deny }
+  return { consent, accept, deny };
 }
