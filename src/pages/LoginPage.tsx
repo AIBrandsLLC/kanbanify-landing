@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LogoImg from '../../assets/Logo.png';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -18,7 +19,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md space-y-8">
         <div>
           <a href="/" className="flex justify-center items-center gap-2">
-            <img className="h-10 w-10 rounded-md" src="/assets/Logo.png" alt="Kanbanify" />
+            <img className="h-10 w-10 rounded-md" src={LogoImg} alt="Kanbanify" />
             <span className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Kanbanify</span>
           </a>
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Sign in to your account</h2>

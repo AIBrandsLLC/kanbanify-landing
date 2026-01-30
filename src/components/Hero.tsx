@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroImg from '../../assets/hero.png';
 
 export default function Hero() {
   return (
@@ -37,7 +38,7 @@ export default function Hero() {
           </div>
 
           <div aria-hidden className="relative rounded-2xl bg-slate-100 p-4 shadow-xl dark:bg-slate-800 lg:p-8">
-            <img src="/assets/hero.png" alt="Kanbanify Board and Chat Interface" className="w-full rounded-lg shadow-2xl ring-1 ring-slate-900/10" />
+            <img src={HeroImg} alt="Kanbanify Board and Chat Interface" className="w-full rounded-lg shadow-2xl ring-1 ring-slate-900/10" />
           </div>
         </div>
       </div>
