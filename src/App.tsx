@@ -6,12 +6,20 @@ import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
 import LoginPage from './pages/LoginPage'
+import TermsPage from './pages/TermsPage'
+import PrivacyPage from './pages/PrivacyPage'
 
 export default function App(){
   const path = typeof window !== 'undefined' ? window.location.pathname : '/'
 
   if(path === '/login'){
     return <LoginPage />
+  }
+  if(path === '/terms'){
+    return <TermsPage />
+  }
+  if(path === '/privacy'){
+    return <PrivacyPage />
   }
 
   // Simplified: No About, Testimonials, TrustedCompanies, FinalCTA

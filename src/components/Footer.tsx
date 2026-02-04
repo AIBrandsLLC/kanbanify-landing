@@ -11,8 +11,8 @@ export default function Footer(){
            </div>
            
            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 dark:text-slate-400">
-             <a href="#" className="hover:text-slate-900 dark:hover:text-white">Terms & Conditions</a>
-             <a href="#" className="hover:text-slate-900 dark:hover:text-white">Privacy Policy</a>
+             <a href="/terms" className="hover:text-slate-900 dark:hover:text-white">Terms & Conditions</a>
+             <a href="/privacy" className="hover:text-slate-900 dark:hover:text-white">Privacy Policy</a>
              <a href="#" className="hover:text-slate-900 dark:hover:text-white">Cookie Policy</a>
              <a href="#" className="hover:text-slate-900 dark:hover:text-white">Data Processing Policy</a>
            </div>
