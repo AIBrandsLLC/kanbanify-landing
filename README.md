@@ -27,5 +27,11 @@ npm run build
 - Project name: `kanban-landing-page`
 - Framework: React + Vite
 - Styling: Tailwind CSS
+- Routing: React Router DOM (with Netlify `_redirects` support)
+
+## Recent Updates
+- **Responsive Design**: Enhanced mobile layouts for Navigation, Pricing, and Policies.
+- **Routing**: Implemented client-side routing for seamless navigation.
+- **Dark Mode**: Improved dark mode support across components.
 
 Contributions welcome — open an issue or submit a PR.

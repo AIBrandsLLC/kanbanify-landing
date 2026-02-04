@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const privacyContent = {
   "slug": "privacy",
@@ -524,29 +522,28 @@ const renderBlock = (block: any, index: number) => {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col">
-      <Header />
-      <main className="flex-grow">
-        <div className="mx-auto max-w-4xl px-6 py-12 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-8">
-                {privacyContent.title}
-            </h1>
-            
-            <div className="bg-white dark:bg-slate-900/50 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 p-8 sm:p-12">
-                {privacyContent.sections.map((section) => (
-                    <section key={section.id} className="mb-8 last:mb-0">
-                        {section.title && (
-                            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-6 pb-2 border-b border-slate-100 dark:border-slate-800">
-                                {section.title}
-                            </h2>
-                        )}
-                        {section.blocks.map((block, index) => renderBlock(block, index))}
-                    </section>
-                ))}
-            </div>
+    <div className="mx-auto max-w-4xl px-6 py-12 lg:px-8">
+        <div className="mb-8">
+            <a href="/" className="text-sm font-medium text-primary hover:underline flex items-center gap-1">
+                &larr; Back to Home
+            </a>
         </div>
-      </main>
-      <Footer />
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-8">
+            {privacyContent.title}
+        </h1>
+        
+        <div className="bg-white dark:bg-slate-900/50 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 p-8 sm:p-12">
+            {privacyContent.sections.map((section) => (
+                <section key={section.id} className="mb-8 last:mb-0">
+                    {section.title && (
+                        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-6 pb-2 border-b border-slate-100 dark:border-slate-800">
+                            {section.title}
+                        </h2>
+                    )}
+                    {section.blocks.map((block, index) => renderBlock(block, index))}
+                </section>
+            ))}
+        </div>
     </div>
   );
 }

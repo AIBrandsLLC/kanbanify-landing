@@ -35,9 +35,21 @@ export default function Pricing(){
         <div className="sm:align-center sm:flex sm:flex-col">
           <h2 className="text-3xl font-bold tracking-tight sm:text-center text-slate-900 dark:text-white">Pricing Plans</h2>
           <p className="mt-4 text-lg text-slate-600 sm:text-center dark:text-slate-400">Simple, transparent pricing for teams of all sizes.</p>
-          <div className="relative self-center mt-6 flex rounded-lg bg-slate-100 p-0.5 sm:mt-8">
-            <button onClick={()=>setPeriod('month')} className={`relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:z-10 sm:w-auto sm:px-8 ${period==='month' ? 'bg-white shadow text-slate-900' : 'text-slate-500 hover:text-slate-900'}`}>Monthly billing</button>
-            <button onClick={()=>setPeriod('year')} className={`relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:z-10 sm:w-auto sm:px-8 ${period==='year' ? 'bg-white shadow text-slate-900' : 'text-slate-500 hover:text-slate-900'}`}>Yearly billing <span className="text-primary text-xs ml-1 font-normal">(Save 20%)</span></button>
+          <div className="relative self-center mt-6 flex rounded-lg bg-slate-100 dark:bg-slate-800 p-1 sm:mt-8">
+            <button 
+              onClick={()=>setPeriod('month')} 
+              className={`relative flex-1 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:z-10 px-4 sm:px-8 sm:w-auto sm:flex-none ${period==='month' ? 'bg-white dark:bg-slate-700 shadow text-slate-900 dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}`}
+            >
+              <span className="sm:hidden">Monthly</span>
+              <span className="hidden sm:inline">Monthly billing</span>
+            </button>
+            <button 
+              onClick={()=>setPeriod('year')} 
+              className={`relative flex-1 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:z-10 px-4 sm:px-8 sm:w-auto sm:flex-none ${period==='year' ? 'bg-white dark:bg-slate-700 shadow text-slate-900 dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}`}
+            >
+              <span className="sm:hidden">Yearly <span className="text-primary text-xs ml-0.5">-20%</span></span>
+              <span className="hidden sm:inline">Yearly billing <span className="text-primary text-xs ml-1 font-normal">(Save 20%)</span></span>
+            </button>
           </div>
         </div>
 
