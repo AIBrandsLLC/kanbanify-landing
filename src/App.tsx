@@ -9,6 +9,8 @@ import CookieBanner from './components/CookieBanner'
 import LoginPage from './pages/LoginPage'
 import TermsPage from './pages/TermsPage'
 import PrivacyPage from './pages/PrivacyPage'
+import DpaPage from './pages/DpaPage'
+import CookiesPage from './pages/CookiesPage'
 import ScrollToTop from './components/ScrollToTop'
 
 function Layout() {
@@ -52,6 +54,8 @@ export default function App(){
           <Route index element={<Landing />} />
           <Route path="terms" element={<TermsPage />} />
           <Route path="privacy" element={<PrivacyPage />} />
+          <Route path="dpa" element={<DpaPage />} />
+          <Route path="cookies" element={<CookiesPage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
       </Routes>

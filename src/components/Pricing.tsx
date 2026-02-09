@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Check } from 'lucide-react'
 
 type Period = 'month' | 'year'
 
@@ -11,73 +13,105 @@ export default function Pricing(){
       title: 'Free', 
       priceMonth: '$0', 
       priceYear: '$0', 
-      features: ['Up to 5 boards', 'Unlimited members', 'Community support'] 
+      features: ['Up to 5 boards', 'Unlimited members', 'Community support'],
+      description: 'For individuals and small hobby projects.',
+      highlight: false
     },
     { 
       id: 'team', 
       title: 'Team', 
       priceMonth: '$12', 
       priceYear: '$120', 
-      features: ['Unlimited boards', 'Secure Chat', 'Standard support'] 
+      features: ['Unlimited boards', 'Secure Chat', 'Standard support', 'Advanced Analytics'],
+      description: 'For growing teams that need better collaboration.',
+      highlight: true
     },
     { 
       id: 'org', 
       title: 'Organisation', 
       priceMonth: '$49', 
       priceYear: '$490', 
-      features: ['SAML SSO', 'Audit Logs & Reporting', 'Dedicated Success Manager'] 
+      features: ['SAML SSO', 'Audit Logs & Reporting', 'Dedicated Success Manager', '24/7 Priority Support'],
+      description: 'For large organizations with security needs.',
+      highlight: false
     },
   ]
 
   return (
-    <section id="pricing" className="py-24 bg-background-light dark:bg-background-dark">
+    <section id="pricing" className="py-24 bg-background-alt">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="sm:align-center sm:flex sm:flex-col">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-center text-slate-900 dark:text-white">Pricing Plans</h2>
-          <p className="mt-4 text-lg text-slate-600 sm:text-center dark:text-slate-400">Simple, transparent pricing for teams of all sizes.</p>
-          <div className="relative self-center mt-6 flex rounded-lg bg-slate-100 dark:bg-slate-800 p-1 sm:mt-8">
+        <div className="sm:align-center sm:flex sm:flex-col items-center">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-text sm:text-4xl text-center">Simple, transparent pricing</h2>
+          <p className="mt-4 text-lg text-text-light text-center max-w-2xl">
+            Choose the plan that best fits your team's needs. No hidden fees.
+          </p>
+          
+          <div className="relative mt-8 flex rounded-full bg-background-alt p-1 ring-1 ring-border">
             <button 
               onClick={()=>setPeriod('month')} 
-              className={`relative flex-1 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:z-10 px-4 sm:px-8 sm:w-auto sm:flex-none ${period==='month' ? 'bg-white dark:bg-slate-700 shadow text-slate-900 dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}`}
+              className={`rounded-full px-6 py-2 text-sm font-semibold transition-all ${period==='month' ? 'bg-white text-text shadow-sm' : 'text-text-light hover:text-text'}`}
             >
-              <span className="sm:hidden">Monthly</span>
-              <span className="hidden sm:inline">Monthly billing</span>
+              Monthly
             </button>
             <button 
               onClick={()=>setPeriod('year')} 
-              className={`relative flex-1 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:z-10 px-4 sm:px-8 sm:w-auto sm:flex-none ${period==='year' ? 'bg-white dark:bg-slate-700 shadow text-slate-900 dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}`}
+              className={`rounded-full px-6 py-2 text-sm font-semibold transition-all ${period==='year' ? 'bg-white text-text shadow-sm' : 'text-text-light hover:text-text'}`}
             >
-              <span className="sm:hidden">Yearly <span className="text-primary text-xs ml-0.5">-20%</span></span>
-              <span className="hidden sm:inline">Yearly billing <span className="text-primary text-xs ml-1 font-normal">(Save 20%)</span></span>
+              Yearly <span className="text-primary ml-1 text-xs">-20%</span>
             </button>
           </div>
         </div>
 
-        <div className="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:max-w-none lg:mx-0">
-          {plans.map(p=> (
-            <div key={p.id} className={`rounded-3xl p-8 ring-1 xl:p-10 ${p.id === 'team' ? 'bg-slate-900 ring-slate-900 text-white shadow-xl' : 'bg-white ring-slate-200 dark:bg-slate-900 dark:ring-slate-800'}`}>
-              <h3 className={`text-lg font-semibold leading-8 ${p.id==='team'?'text-white':'text-slate-900 dark:text-white'}`}>{p.title}</h3>
-              <p className="mt-4 flex items-baseline gap-x-2">
-                <span className={`text-4xl font-bold tracking-tight ${p.id==='team'?'text-white':'text-slate-900 dark:text-white'}`}>
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {plans.map((p) => (
+            <motion.div 
+              key={p.id}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.2 }}
+              className={`relative rounded-2xl p-8 xl:p-10 flex flex-col ${
+                p.highlight 
+                  ? 'bg-white ring-2 ring-primary shadow-xl scale-105 z-10' 
+                  : 'bg-white ring-1 ring-border shadow-sm hover:shadow-md'
+              }`}
+            >
+              <div className="mb-4">
+                <h3 className="text-lg font-bold leading-8 text-text">{p.title}</h3>
+                <p className="text-sm text-text-light mt-1">{p.description}</p>
+              </div>
+              
+              <div className="mb-6 flex items-baseline gap-x-1">
+                <span className="text-4xl font-bold tracking-tight text-text">
                   {period === 'month' ? p.priceMonth : p.priceYear}
                 </span>
-                <span className={`text-sm leading-6 ${p.id==='team'?'text-slate-300':'text-slate-500'}`}>/user/{period}</span>
-              </p>
-              <ul className={`mt-8 space-y-3 text-sm leading-6 ${p.id==='team'?'text-slate-300':'text-slate-600 dark:text-slate-300'}`}>
+                <span className="text-sm font-semibold leading-6 text-text-light">/user/{period}</span>
+              </div>
+
+              <a 
+                href="#"
+                className={`mt-auto block rounded-lg px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
+                  p.highlight
+                    ? 'bg-primary text-white hover:bg-primary-hover focus-visible:outline-primary'
+                    : 'bg-primary/5 text-primary hover:bg-primary/10'
+                }`}
+              >
+                {p.highlight ? 'Get started today' : 'Start for free'}
+              </a>
+
+              <ul className="mt-8 space-y-3 text-sm leading-6 text-text-light">
                 {p.features.map(f=> (
                   <li key={f} className="flex gap-x-3">
-                    <span className="material-symbols-outlined text-primary text-lg">check</span>
+                    <Check className="h-5 w-5 flex-none text-primary" aria-hidden="true" />
                     {f}
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
         
-        <div className="mt-10 text-center">
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-                * This pricing page is for informational purposes only. No payment processing is configured.
+        <div className="mt-12 text-center border-t border-border pt-8">
+            <p className="text-xs text-text-light">
+                * Prices are for demonstration purposes. No payment method required for trial.
             </p>
         </div>
       </div>

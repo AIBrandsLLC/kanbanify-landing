@@ -1,0 +1,702 @@
+{
+  "slug": "dpa",
+  "title": "Kanbanify Data Processing Agreement",
+  "meta": {
+    "effective_date": "February 9, 2026"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "title": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This Data Processing Agreement (“DPA”) forms part of the agreement or terms under which Kanbanify provides the Services to a Customer (the “Main Agreement”). This DPA applies where Kanbanify processes Personal Data on behalf of the Customer as a Processor. This DPA is intended to be jurisdiction neutral while supporting GDPR-aligned processing standards."
+        }
+      ]
+    },
+    {
+      "id": "1-definitions",
+      "title": "Definitions",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Controller, Processor, Personal Data, Data Subject, Processing, Personal Data"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Breach: as defined in applicable Data Protection Laws."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Data Protection Laws means all applicable laws and regulations relating to privacy"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "or the Processing of Personal Data, including where applicable the GDPR and other comparable privacy frameworks."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Services means the Kanbanify platform made available via kanbanify.org and any"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "related subdomains, including collaboration features such as boards, chat, meetings, documents, and reporting."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Sub-processor means any third party engaged by Kanbanify to Process Personal"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Data on behalf of the Customer."
+        }
+      ]
+    },
+    {
+      "id": "2-roles-of-the-parties",
+      "title": "Roles of the Parties",
+      "blocks": []
+    },
+    {
+      "id": "1-the-parties-acknowledge-that",
+      "title": "The parties acknowledge that:",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "a. The Customer is the Controller of Customer Personal Data. b. Kanbanify is the Processor of Customer Personal Data to the extent Kanbanify processes such data on behalf of Customer in providing the Services."
+        }
+      ]
+    },
+    {
+      "id": "2-where-kanbanify-processes-personal-data-for-its-own-independent-purposes-for",
+      "title": "Where Kanbanify processes Personal Data for its own independent purposes (for",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "example, account administration and security operations), Kanbanify acts as a Controller for that limited Processing."
+        }
+      ]
+    },
+    {
+      "id": "3-processing-details",
+      "title": "Processing Details",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify will Process Personal Data only as needed to provide the Services under the Main Agreement and in accordance with Customer instructions."
+        },
+        {
+          "type": "subheading",
+          "text": "Subject matter"
+        },
+        {
+          "type": "paragraph",
+          "text": "Provision of project management and collaboration Services, including boards, tasks, chat, meetings, documents, and reporting exports."
+        },
+        {
+          "type": "subheading",
+          "text": "Nature and purpose"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Create and manage workspaces and user access",
+            "Enable collaboration on tasks and projects",
+            "Support chat and meeting features",
+            "Store and retrieve documents and attachments",
+            "Generate reporting outputs, including manual timesheet entry and report exports",
+            "Operate, maintain, secure, and support the Services"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Duration"
+        },
+        {
+          "type": "paragraph",
+          "text": "Processing continues for the duration of the Main Agreement, and thereafter for the period needed to complete deletion or return obligations, subject to legally required retention."
+        },
+        {
+          "type": "subheading",
+          "text": "Categories of Data Subjects"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Customer users and invited users, including employees, contractors, or"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "collaborators authorised by Customer"
+        },
+        {
+          "type": "subheading",
+          "text": "Types of Personal Data"
+        },
+        {
+          "type": "paragraph",
+          "text": "Depending on Customer configuration and use of the Services:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Account and profile data (name, email, username, role, workspace membership)",
+            "Authentication data (password hash, session identifiers)",
+            "Workspace content entered by users:"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "o Tasks, comments, descriptions, assignments o Chat messages o Meeting details, including scheduling metadata and participant lists o Meeting recordings and meeting transcripts where enabled o Documents, attachments, and wiki-style content"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Reporting data:"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "o Manual timesheet entries and report exports (XLS, XLSX)"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Technical and security data:"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "o IP address and security logs (see retention in Annex 3)"
+        }
+      ]
+    },
+    {
+      "id": "4-customer-responsibilities",
+      "title": "Customer Responsibilities",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Customer will:"
+        }
+      ]
+    },
+    {
+      "id": "1-ensure-it-has-a-valid-legal-basis-to-collect-and-provide-personal-data-to-kanb",
+      "title": "Ensure it has a valid legal basis to collect and provide Personal Data to Kanbanify.",
+      "blocks": []
+    },
+    {
+      "id": "2-provide-any-required-notices-to-data-subjects-and-obtain-consents-where-requir",
+      "title": "Provide any required notices to Data Subjects and obtain consents where required.",
+      "blocks": []
+    },
+    {
+      "id": "3-ensure-customer-instructions-comply-with-data-protection-laws",
+      "title": "Ensure Customer instructions comply with Data Protection Laws.",
+      "blocks": []
+    },
+    {
+      "id": "4-manage-user-access-roles-and-permissions-appropriately-including-administrativ",
+      "title": "Manage user access, roles, and permissions appropriately, including administrative",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "access to workspace content."
+        }
+      ]
+    },
+    {
+      "id": "5-kanbanify-responsibilities-as-processor",
+      "title": "Kanbanify Responsibilities as Processor",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify will, with respect to Customer Personal Data:"
+        },
+        {
+          "type": "subheading",
+          "text": "Processing on instructions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Process Customer Personal Data only:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "as necessary to provide the Services, and",
+            "in accordance with Customer documented instructions,"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "unless required by law to process otherwise. If legally permitted, Kanbanify will notify Customer before Processing under such legal requirement."
+        },
+        {
+          "type": "subheading",
+          "text": "Confidentiality"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ensure personnel authorised to Process Customer Personal Data are bound by confidentiality obligations."
+        },
+        {
+          "type": "subheading",
+          "text": "Security measures"
+        },
+        {
+          "type": "paragraph",
+          "text": "Implement appropriate technical and organisational measures (“TOMs”) to protect Customer Personal Data, described in Annex 1."
+        },
+        {
+          "type": "subheading",
+          "text": "Sub-processors"
+        },
+        {
+          "type": "paragraph",
+          "text": "Engage Sub-processors only in accordance with Section 7."
+        },
+        {
+          "type": "subheading",
+          "text": "Data Subject requests"
+        },
+        {
+          "type": "paragraph",
+          "text": "If Kanbanify receives a request directly from a Data Subject relating to Customer Personal Data, Kanbanify will:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "notify Customer, and",
+            "not respond unless instructed by Customer, except as required by law."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Personal Data Breach notification"
+        },
+        {
+          "type": "paragraph",
+          "text": "Notify Customer without undue delay after becoming aware of a Personal Data Breach affecting Customer Personal Data."
+        },
+        {
+          "type": "subheading",
+          "text": "Return or deletion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Upon termination or expiry of the Main Agreement, Kanbanify will delete or return Customer Personal Data in accordance with Annex 2, unless retention is required by law."
+        },
+        {
+          "type": "subheading",
+          "text": "Audit assistance"
+        },
+        {
+          "type": "paragraph",
+          "text": "Provide reasonable information necessary to demonstrate compliance with this DPA. If Customer requests an audit, it must be:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "limited in scope to Processing under this DPA,",
+            "subject to reasonable notice and scheduling,",
+            "conducted in a manner that avoids disruption to other customers and protects"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "confidentiality and security."
+        }
+      ]
+    },
+    {
+      "id": "6-customer-instructions",
+      "title": "Customer Instructions",
+      "blocks": []
+    },
+    {
+      "id": "1-customer-instructions-should-be-documented-for-example-via-configuration",
+      "title": "Customer instructions should be documented (for example, via configuration",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "settings, administrator actions, or written instructions)."
+        }
+      ]
+    },
+    {
+      "id": "2-if-kanbanify-reasonably-believes-an-instruction-violates-data-protection-laws",
+      "title": "If Kanbanify reasonably believes an instruction violates Data Protection Laws,",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify may pause the instruction and notify Customer."
+        }
+      ]
+    },
+    {
+      "id": "7-sub-processors",
+      "title": "Sub-processors",
+      "blocks": []
+    },
+    {
+      "id": "1-customer-grants-kanbanify-general-authorisation-to-appoint-sub-processors-to",
+      "title": "Customer grants Kanbanify general authorisation to appoint Sub-processors to",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "provide the Services."
+        }
+      ]
+    },
+    {
+      "id": "2-kanbanify-will-require-sub-processors-to-implement-data-protection-obligations",
+      "title": "Kanbanify will require Sub-processors to implement data protection obligations",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "that provide a level of protection appropriate to the Services."
+        }
+      ]
+    },
+    {
+      "id": "3-kanbanify-will-remain-responsible-for-sub-processor-performance-of-obligations",
+      "title": "Kanbanify will remain responsible for Sub-processor performance of obligations",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "relating to Processing under this DPA."
+        }
+      ]
+    },
+    {
+      "id": "8-international-transfers",
+      "title": "International Transfers",
+      "blocks": []
+    },
+    {
+      "id": "1-processing-may-occur-globally-depending-on-infrastructure-location-resilience",
+      "title": "Processing may occur globally depending on infrastructure location, resilience,",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "and operational needs."
+        }
+      ]
+    },
+    {
+      "id": "2-where-data-protection-laws-require-safeguards-for-international-transfers",
+      "title": "Where Data Protection Laws require safeguards for international transfers,",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify will implement appropriate transfer mechanisms consistent with applicable requirements."
+        }
+      ]
+    },
+    {
+      "id": "9-access-encryption-and-meeting-rules",
+      "title": "Access, encryption, and meeting rules",
+      "blocks": []
+    },
+    {
+      "id": "1-encryption-is-enabled-across-the-services-by-default",
+      "title": "Encryption is enabled across the Services by default.",
+      "blocks": []
+    },
+    {
+      "id": "2-workspace-roles-may-enable-visibility-of-linked-task-context-including-related",
+      "title": "Workspace roles may enable visibility of linked task context, including related chat",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "and meeting information, consistent with the platform design."
+        }
+      ]
+    },
+    {
+      "id": "3-meeting-recordings-and-transcripts",
+      "title": "Meeting recordings and transcripts",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "a. Where recordings and transcripts are available, they are accessible to participants of the relevant meeting or group, including participants who did not attend, similar to standard collaboration tools. b. Customer controls who is a participant and who has workspace access."
+        }
+      ]
+    },
+    {
+      "id": "10-retention",
+      "title": "Retention",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Retention is described in Annex 3, including:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "IP log retention: 30 days",
+            "Other retention periods where applicable or required for security, operational"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "integrity, or legal compliance"
+        }
+      ]
+    },
+    {
+      "id": "11-liability",
+      "title": "Liability",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Liability under this DPA will follow the liability terms in the Main Agreement and any mandatory provisions under applicable Data Protection Laws."
+        }
+      ]
+    },
+    {
+      "id": "12-term-and-termination",
+      "title": "Term and termination",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This DPA remains in effect for the duration of the Main Agreement and applies to Processing performed during that period."
+        }
+      ]
+    },
+    {
+      "id": "13-contact",
+      "title": "Contact",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Privacy and data protection enquiries relating to this DPA: support@kanbanify.org"
+        }
+      ]
+    },
+    {
+      "id": "annex-1-technical-and-organisational",
+      "title": "Annex 1: Technical and Organisational",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Measures Kanbanify will maintain measures appropriate to the nature of the Services and the risks, which may include:"
+        }
+      ]
+    },
+    {
+      "id": "1-access-controls",
+      "title": "Access controls",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Role-based access controls for workspaces",
+            "Administrative access restricted to authorised roles",
+            "Least-privilege internal access controls where applicable"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-encryption",
+      "title": "Encryption",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Encryption in transit (TLS)",
+            "Encryption enabled across the Services by default",
+            "Controls to prevent unauthorised access to decrypted content"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-authentication-security",
+      "title": "Authentication security",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Passwords stored as salted, hashed values",
+            "Session controls and secure cookie handling for authenticated access"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-logging-and-monitoring",
+      "title": "Logging and monitoring",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Security logging to detect abuse and operational issues",
+            "Access controls around logs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-backups-and-resilience",
+      "title": "Backups and resilience",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Backups and recovery procedures appropriate to the Services",
+            "Measures designed to restore availability following an incident"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-vulnerability-management",
+      "title": "Vulnerability management",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Patch management and security updates",
+            "Reasonable vulnerability handling processes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7-incident-response",
+      "title": "Incident response",
+      "blocks": []
+    },
+    {
+      "id": "8-procedures-to-assess-contain-and-remediate-incidents",
+      "title": "Procedures to assess, contain, and remediate incidents",
+      "blocks": []
+    },
+    {
+      "id": "9-breach-notification-obligations-per-section-56",
+      "title": "Breach notification obligations per Section 5.6",
+      "blocks": []
+    },
+    {
+      "id": "annex-2-deletion-and-return-on",
+      "title": "Annex 2: Deletion and Return on",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Termination"
+        }
+      ]
+    },
+    {
+      "id": "1-upon-termination-or-expiry-of-the-main-agreement-kanbanify-will-delete-or-retu",
+      "title": "Upon termination or expiry of the Main Agreement, Kanbanify will delete or return",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Customer Personal Data within a commercially reasonable period consistent with standard SaaS practice and operational constraints."
+        }
+      ]
+    },
+    {
+      "id": "2-if-deletion-is-not-immediately-feasible-due-to-backups-or-technical-constraint",
+      "title": "If deletion is not immediately feasible due to backups or technical constraints,",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify will:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "isolate data from active Processing where practical, and",
+            "complete deletion during normal backup rotation cycles where applicable."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-kanbanify-may-retain-limited-data-where-required-by-law-or-for-the-establishme",
+      "title": "Kanbanify may retain limited data where required by law or for the establishment,",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "exercise, or defence of legal claims."
+        }
+      ]
+    },
+    {
+      "id": "annex-3-retention-schedule",
+      "title": "Annex 3: Retention Schedule",
+      "blocks": []
+    },
+    {
+      "id": "1-ip-logs-and-security-logs-30-days",
+      "title": "IP logs and security logs: 30 days",
+      "blocks": []
+    },
+    {
+      "id": "2-workspace-content-and-files-retained-while-the-workspace-remains-active",
+      "title": "Workspace content and files: retained while the workspace remains active,",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "unless deleted by Customer users or administrators, subject to any technical constraints for deletion completion"
+        }
+      ]
+    },
+    {
+      "id": "3-account-data-retained-while-the-account-remains-active-and-thereafter-as-neede",
+      "title": "Account data: retained while the account remains active, and thereafter as needed",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "to complete deletion and comply with legal or security obligations"
+        }
+      ]
+    },
+    {
+      "id": "4-meeting-recordings-and-transcripts-retained-while-enabled-and-stored-within-th",
+      "title": "Meeting recordings and transcripts: retained while enabled and stored within the",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "workspace scope, accessible to meeting participants, and subject to Customer deletion actions and technical constraints for deletion completion"
+        }
+      ]
+    }
+  ]
+}

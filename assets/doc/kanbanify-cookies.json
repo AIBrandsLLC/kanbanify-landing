@@ -1,0 +1,305 @@
+{
+  "slug": "cookies",
+  "title": "Kanbanify Cookie Policy",
+  "meta": {
+    "effective_date": "February 9, 2026",
+    "version": "1.1"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "title": null,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This Cookie Policy explains how Kanbanify uses cookies and similar technologies on Kanbanify websites and applications. This includes the main domain and future customer workspace subdomains such as companyname.kanbanify.org. If you have questions, contact support@kanbanify.org."
+        }
+      ]
+    },
+    {
+      "id": "1-what-cookies-are",
+      "title": "What cookies are",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cookies are small text files stored on your device when you visit a website. Cookies help websites function properly, such as keeping you signed in, remembering preferences, and protecting the service from misuse. Cookies can be:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "First party cookies set by Kanbanify domains such as kanbanify.org and its"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "subdomains"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Third party cookies set by other domains when their services are used on a page"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cookies can also be:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Session cookies, which expire when you close your browser or sign out",
+            "Persistent cookies, which remain on your device for a defined period or until you"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "delete them"
+        }
+      ]
+    },
+    {
+      "id": "2-similar-technologies-we-may-use",
+      "title": "Similar technologies we may use",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In addition to cookies, Kanbanify may use similar technologies to store or access information on your device, such as:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Local Storage",
+            "IndexedDB",
+            "Similar browser storage"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "These technologies can support essential functionality such as improving performance, caching frequently used data, remembering settings, and maintaining login state. If Kanbanify is accessed through native mobile applications, similar information may be stored using device storage rather than browser cookies."
+        }
+      ]
+    },
+    {
+      "id": "3-where-we-use-cookies",
+      "title": "Where we use cookies",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify may use cookies on:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "The main website and landing pages on kanbanify.org",
+            "Customer workspaces and dashboards hosted on subdomains, once available,"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "such as companyname.kanbanify.org"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "A separate marketing site operated under Kanbanify domains, if introduced"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-categories-of-cookies-we-use",
+      "title": "Categories of cookies we use",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Essential cookies"
+        },
+        {
+          "type": "paragraph",
+          "text": "These cookies are strictly necessary for the service to function and cannot be switched off in our systems. They are typically set in response to actions you take such as logging in, navigating within an authenticated session, or using security protected areas. Essential purposes include:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Authentication and session management",
+            "Security protections such as CSRF protection",
+            "Fraud prevention and abuse prevention",
+            "Reliability features such as load balancing",
+            "Remembering essential service preferences"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Preference cookies"
+        },
+        {
+          "type": "paragraph",
+          "text": "These cookies remember choices you make, such as language or interface preferences. They improve usability but are not always required for core functionality."
+        },
+        {
+          "type": "subheading",
+          "text": "Analytics cookies"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kanbanify does not use analytics cookies at launch. If Kanbanify introduces analytics later, we will:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Request your consent before placing analytics cookies or using similar identifiers"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "where required by law"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Provide a clear explanation of what is collected and why",
+            "Allow you to decline analytics without losing access to core product features",
+            "Update this policy to list the analytics provider and cookie names"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Advertising cookies"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kanbanify does not use advertising cookies or advertising pixels."
+        }
+      ]
+    },
+    {
+      "id": "5-cookie-consent-and-your-choices",
+      "title": "Cookie consent and your choices",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "When you first visit Kanbanify, you will see a cookie banner that lets you choose:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Accept all cookies",
+            "Essential only",
+            "Decline non essential cookies"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If you choose essential only or decline non essential cookies, Kanbanify will only use essential cookies and similar storage required to provide the service. You can change your preferences later using a cookie settings link if it is available in the website footer or within application settings."
+        }
+      ]
+    },
+    {
+      "id": "6-login-session-duration-and-remember-me",
+      "title": "Login session duration and remember me",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify is designed to support a default login session that can persist for up to 7 days to improve usability. If a remember me option is offered, selecting it may keep you signed in for a longer period. If you do not select it, your session may end sooner depending on your browser settings or sign out action. For security, you should sign out on shared devices."
+        }
+      ]
+    },
+    {
+      "id": "7-third-party-cookies-and-future-services",
+      "title": "Third party cookies and future services",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify aims to minimise third party cookies. However, Kanbanify may introduce third party services in the future that could set cookies or similar identifiers, for example:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Billing through Stripe",
+            "Embedded meeting or video components",
+            "Security or delivery services such as a CDN or WAF"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If such services are introduced, their cookies may appear in your browser. Where required by law, we will request consent for non essential cookies and update this policy to reflect the change."
+        }
+      ]
+    },
+    {
+      "id": "8-current-cookie-list",
+      "title": "Current cookie list",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kanbanify is still finalising the organisation and subdomain workspace model and the authentication implementation. Because of this, the exact cookie names and retention values may vary as the product evolves. Once the authentication and subdomain structure is finalised, Kanbanify will publish an updated cookie list that includes:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Cookie name or identifier",
+            "Purpose",
+            "Retention period",
+            "First party or third party classification",
+            "Domain where it is set"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9-managing-cookies-in-your-browser",
+      "title": "Managing cookies in your browser",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You can control cookies through your browser settings. Most browsers allow you to:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Delete cookies",
+            "Block cookies",
+            "Configure site by site controls"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If you block essential cookies, Kanbanify may not function correctly and you may not be able to sign in. You can also clear Local Storage and IndexedDB using your browser site data controls. Clearing these may sign you out and remove cached application data."
+        }
+      ]
+    },
+    {
+      "id": "10-updates-to-this-cookie-policy",
+      "title": "Updates to this Cookie Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may update this Cookie Policy from time to time. If changes are material, we will provide notice through the service or by email. The effective date at the top shows the current version."
+        }
+      ]
+    },
+    {
+      "id": "11-contact",
+      "title": "Contact",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Questions about cookies or privacy: support@kanbanify.org"
+        }
+      ]
+    }
+  ]
+}

@@ -5,12 +5,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1f9d55',
-        'background-light': '#f6f7f8',
-        'background-dark': '#101922'
+        primary: {
+          DEFAULT: 'var(--color-primary)',
+          hover: 'var(--color-primary-hover)',
+        },
+        text: {
+          DEFAULT: 'var(--color-text)',
+          light: 'var(--color-text-light)',
+        },
+        success: 'var(--color-success)',
+        background: {
+          light: 'var(--color-background)',
+          alt: 'var(--color-background-alt)',
+        },
+        border: 'var(--color-border)',
       },
       fontFamily: {
-        display: ['JetBrains Mono', 'ui-sans-serif', 'system-ui']
+        heading: ['Inter', 'sans-serif'],
+        body: ['Public Sans', 'sans-serif'],
       },
       borderRadius: {
         DEFAULT: '0.25rem',
