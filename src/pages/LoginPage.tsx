@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import LogoImg from '../../assets/Logo.png';
+import LogoImg from '../../assets/logo2.png';
 
 export default function LoginPage() {
   
@@ -35,3 +35,4 @@ export default function LoginPage() {
     </div>
   );
 }
+
