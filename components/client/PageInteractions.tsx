@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { REGISTER_URL } from "@/data/app-links";
 
 declare global {
   interface Window {
@@ -10,6 +11,7 @@ declare global {
     setCycle?: (cycle: "m" | "y") => void;
     showTab?: (id: string, button: HTMLElement) => void;
     filterRes?: (type: string, button: HTMLElement) => void;
+    registerWithKanbanify?: () => false;
   }
 }
 
@@ -151,10 +153,13 @@ function enableSignupPrefill() {
 
 export function PageInteractions() {
   useEffect(() => {
-    window.goSignup = (form: HTMLFormElement) => {
-      const data = new FormData(form);
-      const email = String(data.get("email") ?? "");
-      window.location.href = `/signup/${email ? `?email=${encodeURIComponent(email)}` : ""}`;
+    window.goSignup = () => {
+      window.location.href = REGISTER_URL;
+      return false;
+    };
+
+    window.registerWithKanbanify = () => {
+      window.location.href = REGISTER_URL;
       return false;
     };
 
@@ -200,7 +205,19 @@ export function PageInteractions() {
       if (event.key === "Escape") window.closeVideo?.();
     };
 
+    const signupForm = document.querySelector<HTMLFormElement>(".auth form");
+    const oauthButtons = [...document.querySelectorAll<HTMLButtonElement>(".oauth button")];
+    const onSignupSubmit = (event: SubmitEvent) => {
+      event.preventDefault();
+      window.location.href = REGISTER_URL;
+    };
+    const onOauthClick = () => {
+      window.location.href = REGISTER_URL;
+    };
+
     document.addEventListener("keydown", onKeyDown);
+    signupForm?.addEventListener("submit", onSignupSubmit);
+    oauthButtons.forEach((button) => button.addEventListener("click", onOauthClick));
     enableSignupPrefill();
 
     const cleanups = [
@@ -220,6 +237,9 @@ export function PageInteractions() {
       delete window.setCycle;
       delete window.showTab;
       delete window.filterRes;
+      delete window.registerWithKanbanify;
+      signupForm?.removeEventListener("submit", onSignupSubmit);
+      oauthButtons.forEach((button) => button.removeEventListener("click", onOauthClick));
     };
   }, []);
 

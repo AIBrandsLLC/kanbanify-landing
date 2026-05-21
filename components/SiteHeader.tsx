@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { APP_URL, LOGIN_URL } from "@/data/app-links";
 
 const navLinks = [
   { href: "/features/", label: "Features" },
@@ -37,10 +38,10 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <a href="#">Login</a>
-          <Link href="/signup/" className="btn btn-primary btn-sm">
-            Sign up - it&apos;s free
-          </Link>
+          <a href={LOGIN_URL}>Login</a>
+          <a href={APP_URL} className="btn btn-primary btn-sm">
+            Open App
+          </a>
         </div>
         <button
           className="nav-burger"
@@ -74,16 +75,16 @@ export function SiteHeader() {
             {link.label}
           </Link>
         ))}
-        <a href="#" onClick={() => setIsOpen(false)}>
+        <a href={LOGIN_URL} onClick={() => setIsOpen(false)}>
           Login
         </a>
-        <Link
-          href="/signup/"
+        <a
+          href={APP_URL}
           className="btn btn-primary"
           onClick={() => setIsOpen(false)}
         >
-          Sign up - it&apos;s free
-        </Link>
+          Open App
+        </a>
       </div>
     </nav>
   );
