@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions — Kanbanify</title>
+<meta name="description" content="How engineering, product, marketing, and agency teams use Kanbanify to plan, talk, and ship in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19V8a1 1 0 0 1 1-1h3v12H6a1 1 0 0 1-1-1zM11 19V5a1 1 0 0 1 1-1h3v15h-4zM17 19v-7h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-3z" fill="currentColor"/></svg>kanbanify</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="#">Login</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Sign up — it's free</a>
+    </div>
+    <div class="nav-burger" onclick="document.getElementById('mm').classList.toggle('show')"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="#">Login</a>
+    <a href="signup.html" class="btn btn-primary">Sign up — it's free</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="d"></span>Solutions by team</span>
+    <h1>Visibility for leads, <span class="hl">flow for the team.</span></h1>
+    <p class="sub">However your team works — sprints, campaigns, or client delivery — Kanbanify keeps the planning and the conversation connected, and turns it into reports leads can actually trust.</p>
+    <div class="cta-row">
+      <a href="signup.html" class="btn btn-primary">Sign up — it's free <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="features.html" class="btn btn-ghost">Explore features</a>
+    </div>
+  </div>
+</div>
+
+<section style="padding:70px 0 90px">
+  <div class="wrap">
+    <!-- TABS (shadcn Tabs) -->
+    <div class="tabs-bar">
+      <button class="tabbtn on" onclick="showTab('eng',this)"><svg viewBox="0 0 20 20" fill="none"><path d="M7 6l-4 4 4 4M13 6l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Engineering</button>
+      <button class="tabbtn" onclick="showTab('prod',this)"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l2.2 4.5 5 .7-3.6 3.5.8 4.9L10 14.8 5.6 17l.8-4.9L2.8 8.2l5-.7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Product</button>
+      <button class="tabbtn" onclick="showTab('mkt',this)"><svg viewBox="0 0 20 20" fill="none"><path d="M4 11l11-5v9L4 14v-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M7 14v3l3 1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Marketing</button>
+      <button class="tabbtn" onclick="showTab('agency',this)"><svg viewBox="0 0 20 20" fill="none"><path d="M4 17V8l6-4 6 4v9" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 17v-4h4v4" stroke="currentColor" stroke-width="1.7"/></svg>Agencies</button>
+    </div>
+
+    <!-- ENGINEERING -->
+    <div class="tabpane on" id="t-eng">
+      <div class="solution">
+        <div>
+          <span class="eyebrow"><span class="d"></span>For Engineering</span>
+          <h3 style="margin-top:14px">Ship faster, with fewer meetings.</h3>
+          <p class="lead">Run sprints on real Scrum boards, then jump into an encrypted huddle on the exact ticket that's blocked — no calendar invite, no separate call app.</p>
+          <ul>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sprint planning, story points &amp; velocity tracking</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>One-click video on any task to unblock fast</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Encrypted channels per repo, service, or squad</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Burndown &amp; cycle-time reports for retros</li>
+          </ul>
+          <a href="signup.html" class="learn" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-weight:700;color:var(--accent)">Start free <svg viewBox="0 0 20 20" fill="none" width="17" height="17"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="visual">
+          <div class="vcard vc1"><div class="vt">Sprint 14 · In progress</div><div class="vb"></div><div class="vb s"></div></div>
+          <div class="vcard vc2"><span class="dot"></span><span class="vx">Huddle on KB-238</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="tabpane" id="t-prod">
+      <div class="solution">
+        <div>
+          <span class="eyebrow"><span class="d"></span>For Product</span>
+          <h3 style="margin-top:14px">From roadmap to release, in context.</h3>
+          <p class="lead">Plan epics, gather feedback in threads, and keep every decision attached to the work it shaped — so nothing gets lost between Slack and the spec doc.</p>
+          <ul>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Epics &amp; roadmaps across multiple teams</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Threads &amp; decisions linked to user stories</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Built-in wiki for specs &amp; PRDs</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Meeting summaries auto-linked to reports</li>
+          </ul>
+          <a href="signup.html" class="learn" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-weight:700;color:var(--accent)">Start free <svg viewBox="0 0 20 20" fill="none" width="17" height="17"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="visual">
+          <div class="vcard vc1"><div class="vt">Q3 Roadmap · Epic</div><div class="vb"></div><div class="vb s"></div></div>
+          <div class="vcard vc2"><span class="dot"></span><span class="vx">Spec review live</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARKETING -->
+    <div class="tabpane" id="t-mkt">
+      <div class="solution">
+        <div>
+          <span class="eyebrow"><span class="d"></span>For Marketing</span>
+          <h3 style="margin-top:14px">Run campaigns like a well-oiled board.</h3>
+          <p class="lead">Plan content calendars and launches on flexible boards, review assets in-thread, and hop on a quick call to align — all without leaving the workspace.</p>
+          <ul>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Campaign &amp; content calendars on Kanban boards</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Asset review &amp; approvals in threads</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Custom fields for channels, status &amp; owners</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Launch-day huddles attached to the campaign</li>
+          </ul>
+          <a href="signup.html" class="learn" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-weight:700;color:var(--accent)">Start free <svg viewBox="0 0 20 20" fill="none" width="17" height="17"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="visual">
+          <div class="vcard vc1"><div class="vt">Spring Launch · Calendar</div><div class="vb"></div><div class="vb s"></div></div>
+          <div class="vcard vc2"><span class="dot"></span><span class="vx">Asset review</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGENCIES -->
+    <div class="tabpane" id="t-agency">
+      <div class="solution">
+        <div>
+          <span class="eyebrow"><span class="d"></span>For Agencies</span>
+          <h3 style="margin-top:14px">A clean, secure space per client.</h3>
+          <p class="lead">Spin up a Space for every client, keep work and conversations private and encrypted, and report on progress without exposing one client to another.</p>
+          <ul>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Separate Spaces &amp; permissions per client</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Encrypted client comms &amp; file sharing</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Exportable progress reports for client updates</li>
+            <li><span class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Role-based access for clients vs. internal team</li>
+          </ul>
+          <a href="signup.html" class="learn" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-weight:700;color:var(--accent)">Start free <svg viewBox="0 0 20 20" fill="none" width="17" height="17"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="visual">
+          <div class="vcard vc1"><div class="vt">Acme Co · Client Space</div><div class="vb"></div><div class="vb s"></div></div>
+          <div class="vcard vc2"><span class="dot"></span><span class="vx">Weekly sync</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOME STATS -->
+<section class="security" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="shead" style="margin-bottom:0">
+      <span class="eyebrow"><span class="d"></span>The outcome</span>
+      <h2>Less chasing updates. More time on the work.</h2>
+    </div>
+    <div class="stats-in" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px">
+      <div class="stat"><div class="n"><em>3→1</em></div><div class="l">tools replaced on average</div></div>
+      <div class="stat"><div class="n"><em>32%</em></div><div class="l">faster cycle time</div></div>
+      <div class="stat"><div class="n"><em>5 hrs</em></div><div class="l">saved per person / week</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="band-card reveal">
+      <h2>Find your team's flow.</h2>
+      <p>Free to start, no credit card. Bring the whole team.</p>
+      <div class="cta-row">
+        <a href="signup.html" class="btn btn-primary">Sign up — it's free <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="pricing.html" class="btn btn-ghost">See pricing</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="index.html" class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19V8a1 1 0 0 1 1-1h3v12H6a1 1 0 0 1-1-1zM11 19V5a1 1 0 0 1 1-1h3v15h-4zM17 19v-7h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-3z" fill="currentColor"/></svg>kanbanify</a>
+      <p class="blurb">Connect tasks, chats, and meetings — and turn them into reports that write themselves.</p>
+    </div>
+    <div><h4>Product</h4><a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
+    <div><h4>Support</h4><a href="#">Documentation</a><a href="#">Guides</a><a href="#">Contact us</a></div>
+    <div><h4>Company</h4><a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookie Policy</a><a href="dpa.html">DPA</a></div>
+  </div>
+  <div class="wrap copyline"><span>© 2026 Kanbanify. All rights reserved.</span><span>Made for high-performing teams</span></div>
+</footer>
+
+<script>
+  function showTab(id,btn){
+    document.querySelectorAll('.tabpane').forEach(p=>p.classList.remove('on'));
+    document.getElementById('t-'+id).classList.add('on');
+    document.querySelectorAll('.tabbtn').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+  }
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,37 +1,33 @@
-# Kanban Landing Page
+# Kanbanify Landing
 
-This repository contains a lightweight landing page for the Kanbanify product — a sample React + Vite + Tailwind project.
+Static-exported Next.js App Router marketing site for Kanbanify.
 
-## Quick start
-
-Install dependencies:
+## Quick Start
 
 ```bash
 npm install
-```
-
-Run dev server:
-
-```bash
 npm run dev
 ```
 
-Build for production:
+Build the static export:
 
 ```bash
 npm run build
 ```
 
-## Repo
+The production build is emitted to `out/` and the Docker image serves that folder with Nginx.
 
-- Project name: `kanban-landing-page`
-- Framework: React + Vite
-- Styling: Tailwind CSS
-- Routing: React Router DOM (with Netlify `_redirects` support)
+## Routes
 
-## Recent Updates
-- **Responsive Design**: Enhanced mobile layouts for Navigation, Pricing, and Policies.
-- **Routing**: Implemented client-side routing for seamless navigation.
-- **Dark Mode**: Improved dark mode support across components.
+- `/`
+- `/features`
+- `/solutions`
+- `/pricing`
+- `/resources`
+- `/signup`
+- `/privacy`
+- `/terms`
+- `/cookies`
+- `/dpa`
 
-Contributions welcome — open an issue or submit a PR.
+The legal pages render from JSON files in `data/legal/`.

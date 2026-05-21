@@ -4,8 +4,11 @@ node_modules/
 .env.local
 /dist
 /build
+.next/
+out/
+tsconfig.tsbuildinfo
 
-# Vite
+# Legacy bundler caches
 .vite/
 
 # Logs

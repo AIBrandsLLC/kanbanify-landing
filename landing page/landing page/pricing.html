@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Kanbanify</title>
+<meta name="description" content="Simple, transparent pricing. Start free, upgrade when your team grows. Compare Free, Team and Organisation plans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* reuse pricing card styles from index, scoped here */
+  .toggle{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px;margin:26px auto 0;gap:4px}
+  .toggle button{font-family:inherit;font-weight:700;font-size:14px;color:var(--ink-3);background:none;border:none;padding:9px 22px;border-radius:999px;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:8px}
+  .toggle button.on{background:var(--accent);color:#fff}
+  .toggle .save{font-size:10.5px;background:var(--green);color:#fff;padding:2px 7px;border-radius:5px;font-weight:800}
+  .toggle button.on .save{background:#fff;color:var(--green)}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px;align-items:start;max-width:1000px;margin-left:auto;margin-right:auto}
+  @media(max-width:880px){.plans{grid-template-columns:1fr;max-width:400px}}
+  .plan{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:30px;transition:transform .2s,box-shadow .25s}
+  .plan:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  .plan.pop{border-color:var(--accent);box-shadow:0 40px 70px -36px rgba(91,79,230,.5);position:relative}
+  .plan .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:5px 13px;border-radius:7px}
+  .plan .pname{font-size:19px;font-weight:800;color:var(--ink)}
+  .plan .pdesc{font-size:14px;color:var(--ink-2);margin:7px 0 22px;min-height:40px;font-weight:500}
+  .plan .price{font-size:46px;font-weight:800;color:var(--ink);line-height:1;letter-spacing:-.03em}
+  .plan .price small{font-size:14px;font-weight:600;color:var(--ink-3);letter-spacing:0}
+  .plan .save-line{font-size:12.5px;font-weight:700;color:var(--green);margin-top:8px;min-height:18px}
+  .plan .pbtn{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;margin:20px 0;font-weight:700;font-size:15px;padding:13px;border-radius:12px;transition:.2s;cursor:pointer}
+  .plan .pbtn.solid{background:var(--accent);color:#fff}.plan .pbtn.solid:hover{background:var(--accent-2)}
+  .plan .pbtn.outline{border:1.5px solid var(--line);color:var(--ink)}.plan .pbtn.outline:hover{border-color:var(--accent);color:var(--accent)}
+  .plan ul{list-style:none;display:grid;gap:13px;border-top:1px solid var(--line-soft);padding-top:22px}
+  .plan li{display:flex;gap:10px;font-size:14.5px;align-items:flex-start;color:var(--ink-2);font-weight:600}
+  .plan li svg{width:18px;height:18px;flex:none;color:var(--accent);margin-top:1px}
+  .price-reassure{display:flex;gap:22px;justify-content:center;margin-top:38px;flex-wrap:wrap}
+  .price-reassure span{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink-2)}
+  .price-reassure svg{width:18px;height:18px;color:var(--green)}
+  .qa{border-bottom:1px solid var(--line);padding:22px 4px;cursor:pointer}
+  .qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:700;color:var(--ink);gap:16px}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary .pl{width:24px;height:24px;flex:none;position:relative;transition:transform .25s}
+  .qa summary .pl::before,.qa summary .pl::after{content:"";position:absolute;background:var(--accent);border-radius:2px}
+  .qa summary .pl::before{top:11px;left:4px;width:16px;height:2px}
+  .qa summary .pl::after{top:4px;left:11px;width:2px;height:16px;transition:opacity .2s}
+  .qa[open] summary .pl::after{opacity:0}
+  .qa p{font-size:15.5px;color:var(--ink-2);margin-top:14px;line-height:1.6;font-weight:500}
+  .faq{max-width:760px;margin:0 auto}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19V8a1 1 0 0 1 1-1h3v12H6a1 1 0 0 1-1-1zM11 19V5a1 1 0 0 1 1-1h3v15h-4zM17 19v-7h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-3z" fill="currentColor"/></svg>kanbanify</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="#">Login</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Sign up — it's free</a>
+    </div>
+    <div class="nav-burger" onclick="document.getElementById('mm').classList.toggle('show')"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="#">Login</a>
+    <a href="signup.html" class="btn btn-primary">Sign up — it's free</a>
+  </div>
+</nav>
+
+<!-- HERO + PLANS -->
+<div class="page-hero" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow"><span class="d"></span>Pricing</span>
+    <h1>Simple, transparent pricing.</h1>
+    <p class="sub">Start free and upgrade when you need the timesheet and team reporting. No hidden fees, no surprise seats, cancel anytime.</p>
+    <div class="toggle">
+      <button id="m" class="on" onclick="setCycle('m')">Monthly</button>
+      <button id="y" onclick="setCycle('y')">Yearly <span class="save">Save 20%</span></button>
+    </div>
+  </div>
+</div>
+
+<section style="padding:0 0 60px;background:linear-gradient(180deg,var(--accent-soft-2),var(--bg) 40%)">
+  <div class="wrap">
+    <div class="plans">
+      <div class="plan">
+        <div class="pname">Free</div>
+        <div class="pdesc">For individuals and small hobby projects.</div>
+        <div class="price">$0 <small>/ user / mo</small></div>
+        <div class="save-line">&nbsp;</div>
+        <a href="signup.html" class="pbtn outline">Start for free</a>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Up to 5 boards</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited members</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Basic chat &amp; 1:1 calls</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Community support</li>
+        </ul>
+      </div>
+      <div class="plan pop">
+        <span class="badge">Most popular</span>
+        <div class="pname">Team</div>
+        <div class="pdesc">For growing teams that live in their boards.</div>
+        <div class="price">$<span data-m="12" data-y="10">12</span> <small>/ user / mo</small></div>
+        <div class="save-line" id="team-save">&nbsp;</div>
+        <a href="signup.html" class="pbtn solid">Get started today <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><b style="font-weight:700;color:var(--ink)">Everything in Free, plus:</b></li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited boards &amp; sprints</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Encrypted group chat &amp; video</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Advanced analytics &amp; exports</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Standard support</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <div class="pname">Organisation</div>
+        <div class="pdesc">For large organizations with security needs.</div>
+        <div class="price">$<span data-m="49" data-y="39">49</span> <small>/ user / mo</small></div>
+        <div class="save-line" id="org-save">&nbsp;</div>
+        <a href="#" class="pbtn outline">Contact sales</a>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><b style="font-weight:700;color:var(--ink)">Everything in Team, plus:</b></li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>SAML single sign-on</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Audit logs &amp; DPA</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated success manager</li>
+          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 priority support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="price-reassure">
+      <span><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8.2" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 10l2.2 2.2L13.5 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>14-day Team trial</span>
+      <span><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8.2" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 10l2.2 2.2L13.5 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Cancel anytime</span>
+      <span><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8.2" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 10l2.2 2.2L13.5 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>No credit card to start</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section style="padding:40px 0 80px">
+  <div class="wrap">
+    <div class="shead" style="margin-bottom:24px"><span class="eyebrow"><span class="d"></span>Compare plans</span><h2>Everything, side by side.</h2></div>
+    <div class="cmp-wrap reveal">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th class="feat-col">Features</th>
+            <th>Free<span class="pp">$0</span></th>
+            <th class="pop-col">Team<span class="pp">$12<small>/mo</small></span></th>
+            <th>Organisation<span class="pp">$49<small>/mo</small></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th colspan="4">Project management</th></tr>
+          <tr><td>Boards</td><td><span class="val">5</span></td><td class="pop-col"><span class="val">Unlimited</span></td><td><span class="val">Unlimited</span></td></tr>
+          <tr><td>Scrum, sprints &amp; backlog</td><td class="no">—</td><td class="pop-col yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Epics, wiki &amp; custom fields</td><td class="no">—</td><td class="pop-col yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Reporting &amp; XLSX export</td><td><span class="val">Basic</span></td><td class="pop-col"><span class="val">Advanced</span></td><td><span class="val">Advanced</span></td></tr>
+
+          <tr><th colspan="4">Timesheet &amp; reporting</th></tr>
+          <tr><td>Time logging on tasks</td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="pop-col yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Per-person &amp; per-sprint timesheet</td><td class="no">—</td><td class="pop-col yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Link chats &amp; meetings to tasks</td><td class="no">—</td><td class="pop-col yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+
+          <tr><th colspan="4">Communication</th></tr>
+          <tr><td>Encrypted chat &amp; rooms</td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="pop-col yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Video calls</td><td><span class="val">1:1</span></td><td class="pop-col"><span class="val">Group</span></td><td><span class="val">Group</span></td></tr>
+          <tr><td>Transcripts &amp; summaries</td><td class="no">—</td><td class="pop-col yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+
+          <tr><th colspan="4">Security &amp; admin</th></tr>
+          <tr><td>SAML single sign-on</td><td class="no">—</td><td class="pop-col no">—</td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Audit logs</td><td class="no">—</td><td class="pop-col no">—</td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Data Processing Agreement</td><td class="no">—</td><td class="pop-col no">—</td><td class="yes"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+          <tr><td>Support</td><td><span class="val">Community</span></td><td class="pop-col"><span class="val">Standard</span></td><td><span class="val">24/7 priority</span></td></tr>
+          <tr>
+            <td></td>
+            <td><a href="signup.html" class="btn btn-ghost btn-sm" style="font-size:13px">Start free</a></td>
+            <td class="pop-col"><a href="signup.html" class="btn btn-primary btn-sm" style="font-size:13px">Get started</a></td>
+            <td><a href="#" class="btn btn-ghost btn-sm" style="font-size:13px">Contact sales</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote" style="text-align:center;font-size:12.5px;color:var(--ink-3);margin-top:24px">* Prices are for demonstration purposes. No payment method required for trial.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:0 0 80px">
+  <div class="wrap">
+    <div class="shead"><span class="eyebrow"><span class="d"></span>Pricing FAQ</span><h2>Questions before you start?</h2></div>
+    <div class="faq reveal">
+      <details class="qa" open><summary>Is the Free plan really free forever?<span class="pl"></span></summary><p>Yes. Up to 5 boards and unlimited members, with no time limit and no credit card. Upgrade only when you need unlimited boards, group calls, or advanced reporting.</p></details>
+      <details class="qa"><summary>How does per-user billing work?<span class="pl"></span></summary><p>You're billed only for active members in your workspace. Add or remove seats anytime — yearly plans are prorated, and there are no surprise overage fees.</p></details>
+      <details class="qa"><summary>What happens when my trial ends?<span class="pl"></span></summary><p>Nothing breaks. If you don't upgrade, your workspace moves to the Free plan automatically — your data stays intact and you keep up to 5 boards.</p></details>
+      <details class="qa"><summary>Can I switch plans or cancel later?<span class="pl"></span></summary><p>Anytime, from your billing settings. Upgrades take effect immediately; downgrades apply at the end of your current cycle. No lock-in.</p></details>
+      <details class="qa"><summary>Do you offer discounts for non-profits or education?<span class="pl"></span></summary><p>Yes — reach out to <a href="#">our team</a> and we'll set you up with eligible pricing.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="band-card reveal">
+      <h2>Start free. <span class="hl">Upgrade when you're ready.</span></h2>
+      <p>No credit card. No risk. Just your team, in one place.</p>
+      <div class="cta-row">
+        <a href="signup.html" class="btn btn-primary">Sign up — it's free <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" class="btn btn-ghost">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="index.html" class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19V8a1 1 0 0 1 1-1h3v12H6a1 1 0 0 1-1-1zM11 19V5a1 1 0 0 1 1-1h3v15h-4zM17 19v-7h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-3z" fill="currentColor"/></svg>kanbanify</a>
+      <p class="blurb">Connect tasks, chats, and meetings — and turn them into reports that write themselves.</p>
+    </div>
+    <div><h4>Product</h4><a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
+    <div><h4>Support</h4><a href="#">Documentation</a><a href="#">Guides</a><a href="#">Contact us</a></div>
+    <div><h4>Company</h4><a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookie Policy</a><a href="dpa.html">DPA</a></div>
+  </div>
+  <div class="wrap copyline"><span>© 2026 Kanbanify. All rights reserved.</span><span>Made for high-performing teams</span></div>
+</footer>
+
+<script>
+  function setCycle(c){
+    document.getElementById('m').classList.toggle('on', c==='m');
+    document.getElementById('y').classList.toggle('on', c==='y');
+    document.querySelectorAll('.price span[data-m]').forEach(s=>{ s.textContent = c==='m' ? s.dataset.m : s.dataset.y; });
+    document.getElementById('team-save').textContent = c==='y' ? 'Billed yearly · save $24/user' : '\u00A0';
+    document.getElementById('org-save').textContent = c==='y' ? 'Billed yearly · save $120/user' : '\u00A0';
+  }
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

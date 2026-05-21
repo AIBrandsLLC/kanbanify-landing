@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Features — Kanbanify</title>
+<meta name="description" content="Link tasks to the chats and meetings that shaped them, log time, and get per-person and per-sprint reports automatically.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .feat-hero{padding:70px 0 40px;position:relative;overflow:hidden;text-align:center}
+  .feat-hero .wrap{position:relative;z-index:2}
+  .feat-hero h1{font-size:clamp(38px,5.5vw,70px);letter-spacing:-.03em;margin:18px auto 0;max-width:880px;line-height:1.03}
+  .feat-hero h1 .hl{color:var(--accent)}
+  .feat-hero .sub{font-size:20px;color:var(--ink-2);font-weight:500;max-width:580px;margin:20px auto 0;line-height:1.55}
+  .feat-hero .cta-row{display:flex;gap:14px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+  .hero-stage{max-width:760px;margin:50px auto 0;position:relative;z-index:2}
+  .hero-stage .device{transform:perspective(1600px) rotateX(4deg)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19V8a1 1 0 0 1 1-1h3v12H6a1 1 0 0 1-1-1zM11 19V5a1 1 0 0 1 1-1h3v15h-4zM17 19v-7h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-3z" fill="currentColor"/></svg>kanbanify</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="#">Login</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Sign up — it's free</a>
+    </div>
+    <div class="nav-burger" onclick="document.getElementById('mm').classList.toggle('show')"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="#">Login</a>
+    <a href="signup.html" class="btn btn-primary">Sign up — it's free</a>
+  </div>
+</nav>
+
+<!-- HERO — leads with the reporting differentiator, shows the Timesheet -->
+<header class="feat-hero">
+  <div class="aurora"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="d"></span>Connected work &amp; automatic reporting</span>
+    <h1>Your team's report, <span class="hl">already written.</span></h1>
+    <p class="sub">Link every task to the chats and meetings that shaped it, log time as you go, and Kanbanify turns it into a per-person and per-sprint timesheet — no spreadsheets, no chasing.</p>
+    <div class="cta-row">
+      <a href="signup.html" class="btn btn-primary">Sign up — it's free <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#timesheet" class="btn btn-ghost">See the timesheet</a>
+    </div>
+  </div>
+  <div class="hero-stage r-scale" data-parallax="0.04">
+    <div class="device">
+      <div class="bar"><span class="d r"></span><span class="d y"></span><span class="d g"></span><span class="url"><svg viewBox="0 0 20 20" fill="none"><path d="M5 9V7a5 5 0 0 1 10 0v2" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="9" width="12" height="8" rx="2" fill="currentColor"/></svg>app.kanbanify.com/reports/timesheet</span></div>
+      <div class="tsheet">
+        <div class="ts-sum">
+          <div class="ts-chip hl"><div class="l">Total logged</div><div class="v">80.0<small>h</small></div></div>
+          <div class="ts-chip"><div class="l">Tasks done</div><div class="v">12</div></div>
+          <div class="ts-chip"><div class="l">Meetings linked</div><div class="v">6</div></div>
+        </div>
+        <div class="ts-table">
+          <div class="ts-r person"><span class="nm"><svg class="ca" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="av" style="background:linear-gradient(135deg,#6457f0,#9a90f6)"></span>Aayush Takkar</span><span class="hrs">40.00h</span></div>
+          <div class="ts-r child"><span class="nm">Research &amp; Development</span><span class="hrs">20.00h</span></div>
+          <div class="ts-r child2"><span class="nm">Core Activity — Data Science<span class="ts-pill"><svg viewBox="0 0 20 20" fill="none"><path d="M8 12a3 3 0 0 0 4 0l3-3a3 3 0 0 0-4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M12 8a3 3 0 0 0-4 0l-3 3a3 3 0 0 0 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>2 meetings</span></span><span class="hrs">16.00h</span></div>
+          <div class="ts-r person"><span class="nm"><svg class="ca" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="av" style="background:linear-gradient(135deg,#2f9f7a,#69c6a3)"></span>Nabila Qotrunnada</span><span class="hrs">40.00h</span></div>
+          <div class="ts-r grand"><span class="nm" style="padding-left:8px">Grand total</span><span class="hrs">80.00h</span></div>
+        </div>
+        <div class="ts-export"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3v9m0 0l-3-3m3 3l3-3M5 16h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Export to XLSX</div>
+      </div>
+    </div>
+    <div class="float-tag" style="right:-10px;bottom:-22px"><span class="ft-ic" style="background:linear-gradient(135deg,#5b4fe6,#8278ee)"><svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M4 16V8M4 16h12M8 13V9M12 13V6" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg></span><div><div class="ft-t">Auto-generated</div><div class="ft-s">from logged time</div></div></div>
+  </div>
+</header>
+
+<div class="marquee" style="margin-top:40px">
+  <div class="marquee-track">
+    <b>Northwind</b><b>Cascade</b><b>Forma</b><b>Helio Labs</b><b>Quanta</b><b>Beacon</b><b>Orbit</b>
+    <b>Northwind</b><b>Cascade</b><b>Forma</b><b>Helio Labs</b><b>Quanta</b><b>Beacon</b><b>Orbit</b>
+  </div>
+</div>
+
+<!-- SHOWCASE 1 · CONNECT (link chats + meetings + time to tasks) -->
+<section class="showcase" id="connect">
+  <div class="wrap">
+    <div class="showcase-grid">
+      <div class="sc-copy r-up">
+        <span class="kicker"><span class="kd"></span>Step 1 · Connect</span>
+        <h2>Every task remembers <span class="hl">the work behind it.</span></h2>
+        <p class="lead">Link the chat threads and the meetings that shaped a task, and log the time you spend. It takes seconds — and it's what makes the reporting trustworthy later.</p>
+        <div class="mini-feats">
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Link chats &amp; meetings to any task</div><div class="mfs">The decision and the recording stay attached.</div></div></div>
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Log time as you work</div><div class="mfs">Hours roll up automatically — no timesheet to fill in.</div></div></div>
+        </div>
+      </div>
+      <div class="sc-visual r-scale" data-parallax="0.05">
+        <div class="device" style="max-width:400px">
+          <div class="bar"><span class="d r"></span><span class="d y"></span><span class="d g"></span><span class="url">KB-230 · Task</span></div>
+          <div style="padding:18px">
+            <div style="font-size:16px;font-weight:800;color:var(--ink)">Call bridge service</div>
+            <div style="font-size:12.5px;color:var(--ink-3);font-weight:600;margin-top:3px">Review · assigned to Priya</div>
+            <div class="lc-row" style="margin-top:16px"><span class="lc-ic chat"><svg viewBox="0 0 20 20" fill="none"><path d="M4 5h12a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H8l-3 3v-3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>#product-sprint thread<span class="grow">8</span></div>
+            <div class="lc-row"><span class="lc-ic meet"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M13 9l4-2v6l-4-2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>Sprint planning · May 18<span class="grow">1h</span></div>
+            <div class="lc-row"><span class="lc-ic meet"><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M13 9l4-2v6l-4-2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>Design review · May 19<span class="grow">45m</span></div>
+            <div class="lc-row t"><span class="lc-ic time"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.7"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>Time logged<span class="grow">4.0h</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE 2 · THE TIMESHEET (centerpiece) -->
+<section class="showcase flip" id="timesheet" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="showcase-grid">
+      <div class="sc-copy r-up">
+        <span class="kicker"><span class="kd"></span>Step 2 · Report</span>
+        <h2>The timesheet that <span class="hl">writes itself.</span></h2>
+        <p class="lead">Because work, conversations, meetings, and time all link to tasks, the report builds itself. Pick a person or a sprint and see hours by client, project, and activity — with the meetings behind every line. Export to XLSX in one click.</p>
+        <div class="mini-feats">
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Per-person &amp; per-sprint views</div><div class="mfs">8h/week? Tasks done? What's next? One screen.</div></div></div>
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Filter by user, client, project or task</div><div class="mfs">Then export to XLSX for billing or payroll.</div></div></div>
+        </div>
+      </div>
+      <div class="sc-visual r-scale">
+        <div class="device">
+          <div class="bar"><span class="d r"></span><span class="d y"></span><span class="d g"></span><span class="url">Timesheet · 16–27 Sep</span></div>
+          <div class="tsheet">
+            <div class="ts-sum">
+              <div class="ts-chip hl"><div class="l">Total</div><div class="v">80.0<small>h</small></div></div>
+              <div class="ts-chip"><div class="l">Done</div><div class="v">12</div></div>
+              <div class="ts-chip"><div class="l">Avg / day</div><div class="v">8.0<small>h</small></div></div>
+            </div>
+            <div class="ts-table">
+              <div class="ts-r person"><span class="nm"><svg class="ca" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="av" style="background:linear-gradient(135deg,#6457f0,#9a90f6)"></span>Aayush Takkar</span><span class="hrs">40.00h</span></div>
+              <div class="ts-r child"><span class="nm">AI Talent</span><span class="hrs">20.00h</span></div>
+              <div class="ts-r child2"><span class="nm">Core Activity — Data Science<span class="ts-pill"><svg viewBox="0 0 20 20" fill="none"><path d="M8 12a3 3 0 0 0 4 0l3-3a3 3 0 0 0-4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M12 8a3 3 0 0 0-4 0l-3 3a3 3 0 0 0 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>2 mtgs</span></span><span class="hrs">16.00h</span></div>
+              <div class="ts-r child2"><span class="nm">Supporting Activity</span><span class="hrs">4.00h</span></div>
+              <div class="ts-r child"><span class="nm">Tribunal Systems</span><span class="hrs">20.00h</span></div>
+              <div class="ts-r grand"><span class="nm" style="padding-left:8px">Grand total</span><span class="hrs">80.00h</span></div>
+            </div>
+            <div class="ts-export"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3v9m0 0l-3-3m3 3l3-3M5 16h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Export to XLSX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE 3 · BOARDS -->
+<section class="showcase" id="boards">
+  <div class="wrap">
+    <div class="showcase-grid">
+      <div class="sc-copy r-up">
+        <span class="kicker"><span class="kd"></span>Plan the work</span>
+        <h2>Boards &amp; sprints, <span class="hl">built for flow.</span></h2>
+        <p class="lead">Flexible Kanban and Scrum boards with epics, backlog, and story points. Drag a card and everyone sees it instantly — the foundation everything else links back to.</p>
+        <div class="mini-feats">
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Custom columns, swimlanes &amp; WIP limits</div><div class="mfs">Shape the board to your exact workflow.</div></div></div>
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Epics, backlog &amp; story points</div><div class="mfs">From a big initiative down to a single task.</div></div></div>
+        </div>
+      </div>
+      <div class="sc-visual r-scale" data-parallax="0.05">
+        <div class="device">
+          <div class="bar"><span class="d r"></span><span class="d y"></span><span class="d g"></span><span class="url">Product Sprint · Board</span></div>
+          <div class="demo-board">
+            <div>
+              <div class="demo-col-h">To do <span class="c">2</span></div>
+              <div class="dcard mover"><span class="tag t-indigo">Design</span><p>Empty states</p><div class="row"><div class="davs"><span class="dav ga"></span></div><span class="dmeta">KB-244</span></div></div>
+              <div class="dcard"><span class="tag t-amber">Docs</span><p>Update API guide</p><div class="row"><div class="davs"><span class="dav gc"></span></div><span class="dmeta">KB-243</span></div></div>
+            </div>
+            <div>
+              <div class="demo-col-h">Doing <span class="c">1</span></div>
+              <div class="dcard"><span class="tag t-rose">Bug</span><p>Drag latency</p><div class="row"><div class="davs"><span class="dav gb"></span></div><span class="dmeta">KB-238</span></div></div>
+            </div>
+            <div>
+              <div class="demo-col-h">Done <span class="c">6</span></div>
+              <div class="dcard"><span class="tag t-green">Feat</span><p>Saved views</p><div class="row"><div class="davs"><span class="dav gd"></span></div><span class="dmeta">KB-231</span></div></div>
+            </div>
+            <svg class="ghost-cursor" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 7-6 1.5L10 18z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE 4 · CHAT, CALLS & RECORDINGS -->
+<section class="showcase flip" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="showcase-grid">
+      <div class="sc-copy r-up">
+        <span class="kicker"><span class="kd"></span>Talk it through</span>
+        <h2>Chat, calls &amp; <span class="hl">recorded meetings.</span></h2>
+        <p class="lead">Encrypted chat and one-click video live inside every project. Meetings are recorded and transcribed automatically — then you link the recording to the tasks it covered.</p>
+        <div class="mini-feats">
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Encrypted chat &amp; one-click video</div><div class="mfs">No separate app, no lost context.</div></div></div>
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">Auto recordings &amp; transcripts</div><div class="mfs">Every meeting is searchable and linkable.</div></div></div>
+        </div>
+      </div>
+      <div class="sc-visual r-scale" data-parallax="0.05">
+        <div class="device" style="max-width:400px">
+          <div class="demo-chat">
+            <div class="dc-head"><span class="dc-live"></span><div><div class="dc-nm">Sprint planning week 1</div><div class="dc-sub">recording · 2 in call</div></div></div>
+            <div class="callgrid">
+              <div class="ctile cv-a"><span>Mara</span></div>
+              <div class="ctile cv-b t2"><span>Devin</span></div>
+            </div>
+            <div class="dc-msgs">
+              <div class="dc-msg m2"><span class="dav ga"></span><div class="dc-bub"><b>Transcript</b>…so the bridge needs to ack within 200ms—</div></div>
+              <div class="dc-msg m3"><span class="dav gd"></span><div class="typing"><i></i><i></i><i></i></div></div>
+            </div>
+            <div class="dc-in">Linked to KB-230 · KB-238<span class="snd"><svg viewBox="0 0 20 20" fill="none"><path d="M3 10l14-6-6 14-2-6-6-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE 5 · SECURITY -->
+<section class="showcase">
+  <div class="wrap">
+    <div class="showcase-grid">
+      <div class="sc-copy r-up">
+        <span class="kicker"><span class="kd"></span>Security &amp; privacy</span>
+        <h2>Private by default. <span class="hl">Yours by design.</span></h2>
+        <p class="lead">Chat and calls are end-to-end encrypted, so only the people in the room can read them. Add SSO, audit logs, and a DPA when your organisation needs them.</p>
+        <div class="mini-feats">
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">End-to-end encryption</div><div class="mfs">Not even your admins can read encrypted rooms.</div></div></div>
+          <div class="mf"><span class="mfi"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="mft">SSO, audit logs &amp; DPA</div><div class="mfs">Enterprise controls when you need them.</div></div></div>
+        </div>
+      </div>
+      <div class="sc-visual r-scale">
+        <div class="device" style="background:linear-gradient(160deg,#1B2335,#2a3450)">
+          <div class="shield-wrap">
+            <span class="pulse-ring"></span><span class="pulse-ring p2"></span>
+            <svg class="shield" viewBox="0 0 100 100" fill="none" style="color:#a79dfb">
+              <path d="M50 8l32 14v22c0 22-16 36-32 40C34 80 18 66 18 44V22L50 8z" stroke="currentColor" stroke-width="3" fill="rgba(167,157,251,.08)"/>
+              <path class="chk" d="M36 50l10 10 20-22" style="stroke:#a79dfb"/>
+            </svg>
+            <div class="enc-msg" style="color:rgba(255,255,255,.55)">●●●●●●  encrypted</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG STATEMENT -->
+<section class="statement">
+  <div class="aurora" style="opacity:.5"></div>
+  <div class="wrap">
+    <h2 class="r-up">Stop building reports.<br><span class="g">Start reading them.</span></h2>
+    <div class="cta-row" style="display:flex;gap:14px;justify-content:center;margin-top:34px;position:relative;z-index:2">
+      <a href="signup.html" class="btn btn-primary">Sign up — it's free <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="pricing.html" class="btn btn-ghost">See pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="index.html" class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19V8a1 1 0 0 1 1-1h3v12H6a1 1 0 0 1-1-1zM11 19V5a1 1 0 0 1 1-1h3v15h-4zM17 19v-7h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-3z" fill="currentColor"/></svg>kanbanify</a>
+      <p class="blurb">Connect tasks, chats, and meetings — and turn them into reports that write themselves.</p>
+      <div class="socials">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.8 3.6A11.3 11.3 0 0 1 3.6 4.6a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5v.1a4 4 0 0 0 3.2 3.9c-.5.2-1.1.2-1.7.1a4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.1a11.3 11.3 0 0 0 6.1 1.8c7.4 0 11.4-6.1 11.4-11.4v-.5c.8-.6 1.5-1.3 2-2.2z"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.3.3.6.9.6 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18H5.7V9.7h2.6V18zM7 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18.3 18h-2.6v-4c0-1-.4-1.7-1.3-1.7-.7 0-1.1.5-1.3 1-.1.2-.1.4-.1.7V18h-2.6V9.7h2.6v1.1c.3-.5 1-1.3 2.4-1.3 1.7 0 3 1.1 3 3.6V18z"/></svg></a>
+      </div>
+    </div>
+    <div><h4>Product</h4><a href="features.html">Features</a><a href="solutions.html">Solutions</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a></div>
+    <div><h4>Support</h4><a href="#">Documentation</a><a href="#">Guides</a><a href="#">Contact us</a></div>
+    <div><h4>Company</h4><a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookie Policy</a><a href="dpa.html">DPA</a></div>
+  </div>
+  <div class="wrap copyline"><span>© 2026 Kanbanify. All rights reserved.</span><span>Made for high-performing teams</span></div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.18});
+  document.querySelectorAll('.r-up,.r-scale').forEach(el=>io.observe(el));
+  const px=[...document.querySelectorAll('[data-parallax]')];
+  let ticking=false;
+  function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{const vh=window.innerHeight;px.forEach(el=>{const r=el.getBoundingClientRect();const c=r.top+r.height/2-vh/2;el.style.transform=`translateY(${c*-parseFloat(el.dataset.parallax)}px)`;});ticking=false;});}
+  window.addEventListener('scroll',onScroll,{passive:true});
+</script>
+</body>
+</html>
