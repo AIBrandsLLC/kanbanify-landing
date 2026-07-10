@@ -50,8 +50,10 @@ nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.82);backdrop-f
   .nav-links{display:none}
   .nav-burger{display:flex}
 }
-/* mobile menu */
-.mobile-menu{display:none;position:fixed;inset:72px 0 0;background:#fff;z-index:55;padding:24px 28px;flex-direction:column;gap:6px}
+/* mobile menu — sits above the cookie banner (z-index 80) so it reads as one
+   full opaque panel over the hero, but below the video modal (z-index 100).
+   overflow-y keeps every item reachable on short viewports. */
+.mobile-menu{display:none;position:fixed;inset:72px 0 0;background:#fff;z-index:90;padding:24px 28px;flex-direction:column;gap:6px;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .mobile-menu.show{display:flex}
 .mobile-menu a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line-soft)}
 .mobile-menu .btn{margin-top:18px}

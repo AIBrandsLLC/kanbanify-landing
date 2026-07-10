@@ -2,9 +2,9 @@ import Link from "next/link";
 
 function SocialIcon({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <a href="#" aria-label={label}>
+    <Link href="/coming-soon/" aria-label={label}>
       {children}
-    </a>
+    </Link>
   );
 }
 
@@ -52,15 +52,15 @@ export function Footer() {
         </div>
         <div>
           <h4>Support</h4>
-          <a href="#">Documentation</a>
-          <a href="#">Guides</a>
-          <a href="#">Contact us</a>
+          <Link href="/coming-soon/">Documentation</Link>
+          <Link href="/coming-soon/">Guides</Link>
+          <Link href="/coming-soon/">Contact us</Link>
         </div>
         <div>
           <h4>Company</h4>
-          <a href="#">About</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a>
+          <Link href="/coming-soon/">About</Link>
+          <Link href="/coming-soon/">Blog</Link>
+          <Link href="/coming-soon/">Careers</Link>
         </div>
         <div>
           <h4>Legal</h4>

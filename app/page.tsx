@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MarketingPage } from "@/components/MarketingPage";
+import { HomeLanding } from "@/components/marketing/home/HomeLanding";
 
 export const metadata: Metadata = {
   title: "Kanbanify - Boards, chat & calls in one workspace",
@@ -17,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <MarketingPage pageKey="home" />;
+  return <HomeLanding />;
 }
