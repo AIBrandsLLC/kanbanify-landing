@@ -50,10 +50,47 @@ nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.82);backdrop-f
   .nav-links{display:none}
   .nav-burger{display:flex}
 }
-/* mobile menu — sits above the cookie banner (z-index 80) so it reads as one
-   full opaque panel over the hero, but below the video modal (z-index 100).
-   overflow-y keeps every item reachable on short viewports. */
-.mobile-menu{display:none;position:fixed;inset:72px 0 0;background:#fff;z-index:90;padding:24px 28px;flex-direction:column;gap:6px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+/* On mobile/tablet, drop the nav's translucent backdrop-filter. A non-none
+   backdrop-filter turns <nav> into a containing block for its fixed
+   descendants, which would anchor the fixed .mobile-menu to the 72px-tall nav
+   box instead of the viewport — the root cause of the overlay bug. Solid white
+   keeps the bar opaque once the blur is gone. */
+@media(max-width:1024px){
+  nav{
+    background:#fff !important;
+    /* Unprefixed only — the compiler auto-emits the -webkit- form (as it does
+       for the base nav blur). Hand-writing both prefixes here made the
+       minifier drop the unprefixed one, which would leave Chrome/Firefox with
+       the base blur (and its containing block) still active. */
+    backdrop-filter:none !important;
+  }
+}
+/* mobile menu — fixed to the viewport (nav no longer forms a containing block
+   on mobile), full height below the 72px bar, above the cookie banner
+   (z-index 80) and below the video modal (z-index 100). dvh handles mobile
+   browser chrome; overflow-y keeps every item reachable. */
+.mobile-menu{
+  display:none;
+  position:fixed;
+  top:72px;
+  left:0;
+  right:0;
+  height:calc(100vh - 72px);
+  background:#fff;
+  z-index:90;
+  padding:24px 28px;
+  flex-direction:column;
+  gap:6px;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+/* dvh handles mobile browser chrome. Kept in a separate @supports rule so the
+   vh base above survives CSS minification as a real fallback for browsers
+   without dynamic-viewport-unit support (a single rule with both height
+   declarations gets collapsed to dvh-only by the minifier). */
+@supports (height:100dvh){
+  .mobile-menu{height:calc(100dvh - 72px)}
+}
 .mobile-menu.show{display:flex}
 .mobile-menu a{font-size:18px;font-weight:700;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line-soft)}
 .mobile-menu .btn{margin-top:18px}

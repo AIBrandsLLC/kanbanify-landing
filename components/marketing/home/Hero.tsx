@@ -2,12 +2,13 @@
 
 import type { FormEvent } from "react";
 import Link from "next/link";
-import { REGISTER_URL } from "@/data/app-links";
+import { buildSignupUrl } from "@/lib/marketing/signup-link";
 
 export function Hero() {
   function handleSignup(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    window.location.href = REGISTER_URL;
+    const email = new FormData(event.currentTarget).get("email");
+    window.location.href = buildSignupUrl(typeof email === "string" ? email : undefined);
   }
 
   return (
